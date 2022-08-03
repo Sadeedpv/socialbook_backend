@@ -19,6 +19,10 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+app.get('/', (req,res) =>{
+    res.send('Hello World');
+})
+
 
 const CONNECTION_URL = `mongodb+srv://${process.env.NAME}:${process.env.PASSWORD}@cluster0.z6znbmr.mongodb.net/?retryWrites=true&w=majority`;
 
